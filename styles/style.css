@@ -1,0 +1,303 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    line-height: 28px;
+}
+
+
+/* css variable for colour properties */
+
+:root {
+    --mainBackground: #f9fafe;
+    --bannerBackground: #111;
+    --blog-card-background: #fff;
+    --buttounBG: #DD0000;
+}
+
+body {
+    background-color: var(--mainBackground);
+}
+
+
+/* common css; ====>> the cclasses I will used multiple times will appears here */
+
+.container {
+    /* 1024 px using accordibg to standard breackpoint for normal desktop divice */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.deafualt-button {
+    display: inline-block;
+    padding: 16px 25px;
+    color: var(--blog-card-background);
+    font-weight: 600;
+    font-size: 18px;
+    background: var(--buttounBG);
+    border-radius: 5px;
+    animation: scaling 1s 10 alternate;
+    transition: 0.4s;
+}
+
+.deafualt-button:hover {
+    color: #111;
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.09);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.colured {
+    color: var(--buttounBG);
+}
+
+
+/* hero section styling start here */
+
+.banner-section {
+    margin-top: 30px;
+}
+
+.banner-content-holder {
+    background: var(--bannerBackground);
+    border-radius: 20px;
+    padding: 0 30px;
+    overflow-y: hidden;
+}
+
+.banner-sectoin-left {
+    max-width: 50%;
+    padding: 50px 0;
+}
+
+.banner-heading {
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--blog-card-background);
+    margin: 20px 0;
+}
+
+.banner-dicripsation {
+    color: var(--blog-card-background);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.banner-sectoin-rigth img {
+    margin-bottom: -8px;
+}
+
+
+/* hero section styling end here */
+
+
+/* blog section struchre */
+
+.parent-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+}
+
+.card-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
+/* blog conatiner navigation area start */
+
+.navigation-area {
+    max-height: 270px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bannerBackground);
+}
+
+.nav-links {
+    display: block;
+    padding: 18px 24px;
+    background-color: var(--blog-card-background);
+    color: var(--bannerBackground);
+    margin: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+    border: 1px solid #353535;
+    transition: 0.4s;
+}
+
+.nav-links:hover {
+    color: var(--buttounBG);
+}
+
+.active {
+    background: var(--buttounBG);
+    color: var(--blog-card-background);
+    transition: 0.4s;
+}
+
+.active:hover {
+    color: #111;
+}
+
+
+/* blog conatiner navigation area end */
+
+.blog {
+    margin-top: 70px;
+}
+
+
+/* blog card  */
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    background: var(--blog-card-background);
+    border: 1px solid #b2b3b5;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+    min-height: 350px;
+    box-shadow: 10px 10px 24px #eaebef, -10px -10px 24px #ffffff;
+}
+
+.blog-card:hover {
+    border-bottom: 4px solid var(--buttounBG);
+}
+
+.blog-card:hover .blog-title {
+    color: var(--buttounBG);
+}
+
+.card-image img {
+    width: 100%;
+    height: 137px;
+    object-fit: cover;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.blog-button {
+    padding: 5px;
+    border: 1px solid #121212;
+    color: #121212;
+    border-radius: 4px;
+}
+
+.blog-title {
+    color: #161616;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.blog-card-info {
+    padding: 8px;
+}
+
+.article-stat {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    padding: 10px 0;
+    border: 1px solid #ebeeff;
+    border-radius: 4px;
+}
+
+.article-stat i {
+    color: #8490fb;
+    margin-right: 10px;
+}
+
+.display-on-tab {
+    display: none;
+}
+
+
+/* footer */
+
+footer {
+    margin-top: 70px;
+    padding: 40px 0;
+    text-align: center;
+    background: var(--bannerBackground);
+}
+
+footer h2 {
+    color: var(--blog-card-background);
+    font-size: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.407);
+}
+
+.footer-menu {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.footer-menu li a {
+    color: var(--blog-card-background);
+    transition: 0.5s;
+}
+
+.footer-menu li a:hover {
+    color: var(--buttounBG);
+}
+
+.footer-icon-menu {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-icon-menu li a i {
+    color: var(--blog-card-background);
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.footer-icon-menu li a i:hover {
+    color: var(--buttounBG);
+}
